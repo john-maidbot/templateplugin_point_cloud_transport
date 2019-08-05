@@ -26,7 +26,7 @@ This template uses the plugin name **templateplugin**, which is refered to multi
 3. templateplugin -> goblin
 ```
 
-![CTRLR](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/ctrlr1.png)
+![CTRLR](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/goblin.png)
 
 At the end of the tutorial, we will also rename files within the project to follow the convention.
 
