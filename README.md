@@ -37,8 +37,11 @@ Our new plugin will most likely use a custom message format to communicate. We w
 1. *templateplugin_publisher.h*
 2. *templateplugin_subscriber.h*
 3. *CMakeLists.txt*
+4. *templateplugin_publisher.cpp*
+5. *templateplugin_subscriber.cpp*
 
 and use the find and replace tool to replace the original name of **CustomMessage** with **GobMessage**.
+
 ```
 CustomMessage -> GobMessage
 ```
@@ -49,35 +52,42 @@ CustomMessage -> GobMessage
 
 ## 5) Dynamic Reconfiguration
 
-Our plugin's publisher and subscriber can also make use of dynamic reconfiguration. If they do, we edit the ParameterGenerator in the following files:
+Our plugin's publisher and subscriber can also make use of dynamic reconfiguration. If they do, we edit the ParameterGenerator appropriatelly in the following files:
 
 1. *cfg/Templateplugin_publisher.cfg*
 2. *cfg/Templateplugin_subscriber.cfg*
 
-Tutorial on how to use dynamic reconfiguration can be found at the official ROS [wiki](http://wiki.ros.org/dynamic_reconfigure/Tutorials/HowToWriteYourFirstCfgFile).
+We can make use of the dynamic reconfiguration [tutorial](http://wiki.ros.org/dynamic_reconfigure/Tutorials/HowToWriteYourFirstCfgFile) if necessary.
 
-## 6) Implement Publisher Functionality
+## 6) Implementing Publisher Functionality
 
-Implementation of your publisher should be in *src/templateplugin_publisher.cpp* within function *publish*.
-The publish function should take a sensor_msgs::PointCloud2 message, compress it into you custom message format (**GobMessage**), and pass the custom message as an argument to *publish_fn()*.
+Implementation of the publisher can be located in *src/templateplugin_publisher.cpp* within function *publish*.
+
+The publish function takes in a sensor_msgs::PointCloud2 message, which should be compressed and converted into our custom message format **GobMessage**. Once the message is ready, we pass it as an argument to *publish_fn*.
 
 ![publish](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/publish.png)
 
-## 7) Implement Subscriber Functionality
+## 7) Implementing Subscriber Functionality
 
-Implementation of your subscriber should be in *src/templateplugin_subscriber.cpp* within function *internalCallback*.
-The *internalCallback* function should receive your custom message (**GobMessage**), decompress it into sensor_msgs::PointCloud2 and pass a shared pointer to the point cloud as an argument to *user_cb()*.
+Implementation of the subscriber can be located in *src/templateplugin_subscriber.cpp* within function *internalCallback*.
+
+The *internalCallback* function takes in our custom message format **GobMessage**, which should be decompressed and converted into sensor_msgs::PointCloud2. Once the point cloud message is ready, we pass a shared pointer to it as an argument to *user_cb*.
 
 ![internalcallback](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/internalcallback.png)
 
 ## 8) Description of Plugin
 
-template_plugins.xml add description of publisher and subscriber
-package.xml add description, author, url, email, etc.
+Before we distribute our plugin, it is important that we fill in all the necessary information about it. 
+
+In template_plugins.xml, make sure to provide brief description of both the publisher and subscriber our plugin uses.
+
+In package.xml, first change the description tag and maintainer tags. These are required and important tags for the package.xml because they lets others know who to contact about the package. At least one maintainer is required, but you can have many if you like. The name of the maintainer goes into the body of the tag, but there is also an email attribute that should be filled out.
+
+Next fill in the license tag, which is also required. Finally fill in the dependencies tags.
 
 ## 9) Update Name of Files
 
-Change names of files:
-1) Templateplugin -> Goblin
-2) templateplugin -> goblin
+The last required step is to rename files in the project. For this, replace any instances of **Templateplugin** with **Goblin** etc.
+
+For example templateplugin_subscriber.cpp should be renamed to goblin_subscriber.cpp amd TemplatepluginPublisher.cfg should be renamed to Goblin.cfg .
 
