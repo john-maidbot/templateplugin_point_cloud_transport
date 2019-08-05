@@ -1,4 +1,4 @@
-# Custom point_cloud_transport Plugins tutorial
+# Custom point_cloud_transport Plugins Tutorial
 
 This repository serves as a tutorial on how to create a custom plugin for [<point_cloud_transport>](https://github.com/paplhjak/point_cloud_transport). It assumes that you have already gone through point_cloud_transport [installation](https://github.com/paplhjak/point_cloud_transport#installation).
 
