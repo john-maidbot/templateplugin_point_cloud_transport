@@ -23,6 +23,8 @@ This template uses plugin name **teplateplugin**. To quickly replace it with the
 3. templateplugin -> goblin
 ```
 
+![CTRLR](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/ctrlr1.png)
+
 ## 4) Custom Message
 
 Your plugin will most likely use a custom message format to communicate. Implement such format in the *msg/CustomMessage.msg* file. 
@@ -36,6 +38,8 @@ and use the find and replace tool to replace **CustomMessage** with **GobMessage
 ```
 CustomMessage -> GobMessage
 ```
+![Renamemessage](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/messagerename.png)
+
 ## 5) Dynamic Reconfiguration
 
 If your plugin's publisher and subscriber make use of dynamic reconfiguration, edit the following files accordingly:
