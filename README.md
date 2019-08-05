@@ -45,7 +45,7 @@ CustomMessage -> GobMessage
 
 ![Renamemessage](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/messagerename.png)
 
-![CTRLR2](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/ctrlr2.png)
+![CTRLR2](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/gobmessage.png)
 
 ## 5) Dynamic Reconfiguration
 
@@ -61,10 +61,14 @@ Tutorial on how to use dynamic reconfiguration can be found at the official ROS 
 Implementation of your publisher should be in *src/templateplugin_publisher.cpp* within function *publish*.
 The publish function should take a sensor_msgs::PointCloud2 message, compress it into you custom message format (**GobMessage**), and pass the custom message as an argument to *publish_fn()*.
 
+![publish](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/publish.png)
+
 ## 7) Implement Subscriber Functionality
 
 Implementation of your subscriber should be in *src/templateplugin_subscriber.cpp* within function *internalCallback*.
 The *internalCallback* function should receive your custom message (**GobMessage**), decompress it into sensor_msgs::PointCloud2 and pass a shared pointer to the point cloud as an argument to *user_cb()*.
+
+![internalcallback](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/internalcallback.png)
 
 ## 8) Description of Plugin
 
