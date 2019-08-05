@@ -6,24 +6,19 @@
 #include <sensor_msgs/PointCloud2.h>
 #include <dynamic_reconfigure/server.h>
 
-//
 #include <templateplugin_point_cloud_transport/TemplatepluginPublisherConfig.h>
-//
 #include "templateplugin_point_cloud_transport/CustomMessage.h"
 
 namespace templateplugin_point_cloud_transport {
 
-//
 class TemplatepluginPublisher : public point_cloud_transport::SimplePublisherPlugin<templateplugin_point_cloud_transport::CustomMessage>
 {
 public:
 
-  //
   virtual ~TemplatepluginPublisher() {}
 
   virtual std::string getTransportName() const
   {
-    //
     return "templateplugin";
   }
 
@@ -37,7 +32,6 @@ protected:
   virtual void publish(const sensor_msgs::PointCloud2& message,
                        const PublishFn& publish_fn) const;
 
-  //
   typedef templateplugin_point_cloud_transport::TemplatepluginPublisherConfig Config;
 
   typedef dynamic_reconfigure::Server<Config> ReconfigureServer;

@@ -34,7 +34,7 @@ void TemplatepluginPublisher::publish(const sensor_msgs::PointCloud2& message, c
 {
     templateplugin_point_cloud_transport::CustomMessage new_message;
 
-    // ... Process the message into new_message
+    // ... Process the message into new_message ... IMPLEMENT YOURSELF
 
     publish_fn(new_message);
 }

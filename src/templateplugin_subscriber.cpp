@@ -39,7 +39,7 @@ void TemplatepluginSubscriber::internalCallback(const templateplugin_point_cloud
 {
     sensor_msgs::PointCloud2Ptr ptr_PC2(new sensor_msgs::PointCloud2);
 
-    // ... Process the CustomMessage into PointCloud2
+    // ... Process the CustomMessage into PointCloud2 ... IMPLEMENT YOURSELF
 
 
     // Publish message to user callback
