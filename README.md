@@ -20,7 +20,7 @@ $ git clone https://github.com/paplhjak/templateplugin_point_cloud_transport.git
 
 ## 3) Replacing Template-Name
 
-This template uses the plugin name **templateplugin**, which is refered to multiple times in the source files. The files and classes implemented within the plugin follow a strict naming convention, inheriting from the name of the plugin. To follow the convention, we will replace each instance of **templateplugin** with the name of our new plugin **goblin**. This can be done quickly using a case-sensitive find and replace tool. Most editors can invoke this tool by pressing CTRL+R. Once you make sure that the find is case-sensitive, go through *all* files in the project, and make the following replacements:
+This template uses the plugin name **templateplugin**, which is being refered to multiple times in the source files. The files and classes implemented within the plugin follow a strict naming convention, inheriting from the name of the plugin. To follow the convention, we will replace each instance of **templateplugin** with the name of our new plugin **goblin**. This can be done quickly using a case-sensitive find and replace tool. Most editors can invoke this tool by pressing CTRL+R. Once you make sure that the find is case-sensitive, go through *all* files in the project, and make the following replacements:
 
 ```
 1. TEMPLATEPLUGIN -> GOBLIN
@@ -81,7 +81,7 @@ The *internalCallback* function takes in our custom message format **GobMessage*
 
 Before we distribute our plugin, it is important that we fill in all the necessary information about it. 
 
-In template_plugins.xml, make sure to provide brief description of both the publisher and subscriber our plugin uses.
+In template_plugins.xml, make sure to provide brief description of both the publisher and the subscriber our plugin uses.
 
 In package.xml, first change the description tag and maintainer tags. These are required and important tags because they let others know who to contact about the package. 
 
@@ -93,7 +93,7 @@ Next fill in the license tag, which is also required. Finally fill in the depend
 
 The last required step is to rename files in the project. For this, replace any instances of **Templateplugin** with **Goblin** etc.
 
-For example templateplugin_subscriber.cpp should be renamed to goblin_subscriber.cpp amd TemplatepluginPublisher.cfg should be renamed to Goblin.cfg .
+For example templateplugin_subscriber.cpp should be renamed to goblin_subscriber.cpp amd TemplatepluginPublisher.cfg should be renamed to GoblinPublisher.cfg .
 
 At this point your plugin should be able to succesfully compile, build and be recognized by point_cloud_transport.
 
