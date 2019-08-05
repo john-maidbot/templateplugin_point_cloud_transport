@@ -1,3 +1,5 @@
+# Custom point_cloud_transport Plugins tutorial
+
 This repository serves as a tutorial on how to create a custom plugin for [<point_cloud_transport>](https://github.com/paplhjak/point_cloud_transport). It assumes that you have already gone through point_cloud_transport [installation](https://github.com/paplhjak/point_cloud_transport#installation).
 
 ## 1) Choosing a name
@@ -87,7 +89,7 @@ At least one maintainer is required, but you can have many if you like. The name
 
 Next fill in the license tag, which is also required. Finally fill in the dependencies tags.
 
-## 9) Update Name of Files
+## 9) Update Names of Files
 
 The last required step is to rename files in the project. For this, replace any instances of **Templateplugin** with **Goblin** etc.
 
