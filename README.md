@@ -1,3 +1,5 @@
+# Custom point_cloud_transport Plugins Tutorial
+
 This repository serves as a tutorial on how to create a custom plugin for [<point_cloud_transport>](https://github.com/paplhjak/point_cloud_transport). It assumes that you have already gone through point_cloud_transport [installation](https://github.com/paplhjak/point_cloud_transport#installation).
 
 ## 1) Choosing a name
@@ -18,7 +20,7 @@ $ git clone https://github.com/paplhjak/templateplugin_point_cloud_transport.git
 
 ## 3) Replacing Template-Name
 
-This template uses the plugin name **templateplugin**, which is refered to multiple times in the source files. The files and classes implemented within the plugin follow a strict naming convention, inheriting from the name of the plugin. To follow the convention, we will replace each instance of **templateplugin** with the name of our new plugin **goblin**. This can be done quickly using a case-sensitive find and replace tool. Most editors can invoke this tool by pressing CTRL+R. Once you make sure that the find is case-sensitive, go through *all* files in the project, and make the following replacements:
+This template uses the plugin name **templateplugin**, which is being refered to multiple times in the source files. The files and classes implemented within the plugin follow a strict naming convention, inheriting from the name of the plugin. To follow the convention, we will replace each instance of **templateplugin** with the name of our new plugin **goblin**. This can be done quickly using a case-sensitive find and replace tool. Most editors can invoke this tool by pressing CTRL+R. Once you make sure that the find is case-sensitive, go through *all* files in the project, and make the following replacements:
 
 ```
 1. TEMPLATEPLUGIN -> GOBLIN
@@ -26,7 +28,7 @@ This template uses the plugin name **templateplugin**, which is refered to multi
 3. templateplugin -> goblin
 ```
 
-![CTRLR](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/ctrlr1.png)
+![CTRLR](https://github.com/paplhjak/templateplugin_point_cloud_transport/blob/master/tutorial_images/goblin.png)
 
 At the end of the tutorial, we will also rename files within the project to follow the convention.
 
@@ -79,15 +81,27 @@ The *internalCallback* function takes in our custom message format **GobMessage*
 
 Before we distribute our plugin, it is important that we fill in all the necessary information about it. 
 
-In template_plugins.xml, make sure to provide brief description of both the publisher and subscriber our plugin uses.
+In template_plugins.xml, make sure to provide brief description of both the publisher and the subscriber our plugin uses.
 
-In package.xml, first change the description tag and maintainer tags. These are required and important tags for the package.xml because they lets others know who to contact about the package. At least one maintainer is required, but you can have many if you like. The name of the maintainer goes into the body of the tag, but there is also an email attribute that should be filled out.
+In package.xml, first change the description tag and maintainer tags. These are required and important tags because they let others know who to contact about the package. 
+
+At least one maintainer is required, but you can have many if you like. The name of the maintainer goes into the body of the tag, but there is also an email attribute that should be filled out.
 
 Next fill in the license tag, which is also required. Finally fill in the dependencies tags.
 
-## 9) Update Name of Files
+## 9) Update Names of Files
 
 The last required step is to rename files in the project. For this, replace any instances of **Templateplugin** with **Goblin** etc.
 
-For example templateplugin_subscriber.cpp should be renamed to goblin_subscriber.cpp amd TemplatepluginPublisher.cfg should be renamed to Goblin.cfg .
+For example templateplugin_subscriber.cpp should be renamed to goblin_subscriber.cpp amd TemplatepluginPublisher.cfg should be renamed to GoblinPublisher.cfg .
+
+At this point your plugin should be able to succesfully compile, build and be recognized by point_cloud_transport.
+
+To see all plugins currently available at your system, enter command:
+
+~~~~~ bash
+rosrun point_cloud_transport list_transports
+~~~~~
+
+
 
