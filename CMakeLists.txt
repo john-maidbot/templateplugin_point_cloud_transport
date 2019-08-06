@@ -15,6 +15,12 @@ add_message_files(
         CustomMessage.msg
 )
 
+generate_messages(
+        DEPENDENCIES
+        std_msgs
+        sensor_msgs
+)
+
 generate_dynamic_reconfigure_options(cfg/TemplatepluginPublisher.cfg cfg/TemplatepluginSubscriber.cfg)
 
 catkin_package(
@@ -23,7 +29,8 @@ catkin_package(
   CATKIN_DEPENDS dynamic_reconfigure point_cloud_transport sensor_msgs std_msgs message_runtime
 )
 
-include_directories(include)
+include_directories(include
+        ${catkin_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME}
         src/templateplugin_publisher.cpp
