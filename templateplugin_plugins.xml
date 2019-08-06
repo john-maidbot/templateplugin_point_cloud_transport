@@ -1,13 +1,13 @@
 <library path="lib/libtemplateplugin_point_cloud_transport">
-  <class name="point_cloud_transport/templateplugin_pub" type="templateplugin_point_cloud_transport::TemplatepluginPublisher" base_class_type="point_cloud_transport::PublisherPlugin">
-    <description>
-      placeholder
-    </description>
-  </class>
+    <class name="point_cloud_transport/templateplugin_pub" type="templateplugin_point_cloud_transport::TemplatepluginPublisher" base_class_type="point_cloud_transport::PublisherPlugin">
+        <description>
+            This plugin does not implement transport functionality and serves solely as a tutorial for implementing custom plugins.
+        </description>
+    </class>
 
-  <class name="point_cloud_transport/templateplugin_sub" type="templateplugin_point_cloud_transport::TemplatepluginSubscriber" base_class_type="point_cloud_transport::SubscriberPlugin">
-    <description>
-      placeholder
-    </description>
-  </class>
+    <class name="point_cloud_transport/templateplugin_sub" type="templateplugin_point_cloud_transport::TemplatepluginSubscriber" base_class_type="point_cloud_transport::SubscriberPlugin">
+        <description>
+            This plugin does not implement transport functionality and serves solely as a tutorial for implementing custom plugins.
+        </description>
+    </class>
 </library>

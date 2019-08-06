@@ -2,14 +2,14 @@
   <name>templateplugin_point_cloud_transport</name>
   <version>0.1.0</version>
   <description>
-    placeholder
+    Template plugin for point_cloud_transport. This plugin does not implement transport functionality and serves solely as a tutorial for implementing custom plugins.
   </description>
-  <maintainer email="placeholder@placeholder.com">John Doe</maintainer>
+  <maintainer email="paplhjak@fel.cvut.cz">Jakub Paplham</maintainer>
   <license> BSD </license>
 
-  <url type="repository">https://github.com/user/templateplugin_point_cloud_transport</url>
+  <url type="repository">https://github.com/paplhjak/templateplugin_point_cloud_transport</url>
 
-  <author>John Doe</author>
+  <author>Jakub Paplham</author>
 
 
   <buildtool_depend>catkin</buildtool_depend>
