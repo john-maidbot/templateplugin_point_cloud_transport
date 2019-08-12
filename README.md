@@ -1,11 +1,12 @@
-# Custom point_cloud_transport Plugins Tutorial
-
-This repository serves as a tutorial on how to create a custom plugin for [<point_cloud_transport>](https://github.com/paplhjak/point_cloud_transport). It assumes that you have already gone through point_cloud_transport [installation](https://github.com/paplhjak/point_cloud_transport#installation).
+# <TEMPLATEPLUGIN POINT CLOUD TRANSPORT>
+**v0.1.**
+  
+This repository serves as a tutorial on how to create a custom plugin for [<point_cloud_transport>](https://github.com/paplhjak/point_cloud_transport). It assumes that you have already gone through [<point_cloud_transport>](https://github.com/paplhjak/point_cloud_transport) [installation](https://github.com/paplhjak/point_cloud_transport#installation).
 
 ## 1) Choosing a name
 The first step in the process of implementing our new plugin is choosing its name. The name shouldn't be too long and should describe the plugin.
 
-For example: draco_point_cloud_transport is a plugin which uses Google [Draco](https://github.com/google/draco) compression, therefore the name **draco**.
+For example: [<draco_point_cloud_transport>](https://github.com/paplhjak/draco_point_cloud_transport) is a plugin which uses Google [Draco](https://github.com/google/draco) compression, therefore the name **draco**.
 
 For demonstrative purposes, the plugin which we will be implementing in this tutorial will be called **goblin**.
 
@@ -95,7 +96,7 @@ The last required step is to rename files in the project. For this, replace any 
 
 For example templateplugin_subscriber.cpp should be renamed to goblin_subscriber.cpp amd TemplatepluginPublisher.cfg should be renamed to GoblinPublisher.cfg .
 
-At this point your plugin should be able to succesfully compile, build and be recognized by point_cloud_transport.
+At this point your plugin should be able to succesfully compile, build and be recognized by [<point_cloud_transport>](https://github.com/paplhjak/point_cloud_transport).
 
 To see all plugins currently available at your system, enter command:
 
